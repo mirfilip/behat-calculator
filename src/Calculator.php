@@ -1,11 +1,10 @@
 <?php
+namespace Calculator;
 
 /**
  * Class Calculator
- *
- * @package ${NAMESPACE}
  */
-class Calculator
+final class Calculator
 {
     /**
      * @var string

@@ -1,12 +1,17 @@
 {
     "name": "mirfilip/behat-calc",
-    "require": {
-        "behat/behat": "^3.2"
-    },
     "authors": [
         {
             "name": "Mirosław Filip",
             "email": "miroslaw.filip@schibsted.pl"
         }
-    ]
+    ],
+    "require": {
+        "behat/behat": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Calculator\\": "src/"
+        }
+    }
 }

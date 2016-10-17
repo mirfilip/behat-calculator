@@ -47,7 +47,12 @@
     - `Background` concept
     - Tags help us logically group scenarios within one ore more features
     - Running tagged scenarios: `behat --tags=sub`
-    - `Transform` helps us simplify steps descriptions
-        
+    - `Transform` helps us simplify steps descriptions        
+9. Restructuring the project
+    - Move Calculator to src/
+    - Use PSR-4 autoloading
+    - Behat uses composer autoloader by defult (if present)
+    - 
+
 Later:
 Behat support in IDE (PHPStorm)
