@@ -10,6 +10,14 @@
     -  Notes section (optional)
     - `Scenario`, `Steps`
     - `Scenario outline`
+4. Behat
+    - This is a **RUNNER** of Gherkin features
+    - Heavily based on `Cucumber` project from Ruby
+    - Easy
+    - `Context`
+    - Interactive mode
+        - `--append-snipets`
+4. Behat initialization
 
 
 Later:
