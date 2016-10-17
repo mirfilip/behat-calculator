@@ -9,7 +9,7 @@
 3. Writing first `.feature` file
     - `Feature` header
     -  Notes section (optional)
-    - `Scenario`, `Steps`
+    - `Scenario`, `Steps`, `Tags`
     - `Scenario outline`
 4. Behat
     - This is a **RUNNER** of Gherkin features
@@ -27,5 +27,11 @@
     - Problem with scenario description: minus signs
     - Scenario description can be a normal sentence (limited) or regex
     - We switch to regex
+    - Scenarios implemented but Calculator is missing
+    - By default, `features/bootstrap` is PSR-0 autoloaded
+    - For MVP, Calculator class goes to `feature/bootstrap`
+    - Very naive implementation first
+    - `@wip` scenarios - return to tags concept
+    
 Later:
 Behat support in IDE (PHPStorm)

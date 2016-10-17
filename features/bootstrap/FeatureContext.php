@@ -48,7 +48,7 @@ class FeatureContext implements Context
      */
     public function iShouldGet($expected)
     {
-        // TODO: Errors?
+        // TODO: What if errors occurred?
         $this->calc->getResult();
     }
 

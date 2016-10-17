@@ -59,7 +59,11 @@ Feature: Arithmetic operations
     When I divide 10 and 0
     Then I should get an error
 
+  @wip
   Scenario: Multiplication of two positive numbers
+  @wip
   Scenario: Multiplication of two negative numbers
+  @wip
   Scenario: Multiplication of one positive and one negative number
+  @wip
   Scenario: Multiplication of one negative and one positive number
