@@ -22,7 +22,7 @@ Feature: Arithmetic operations
 
   @add
   Scenario: Addition of two negative numbers
-    When I add -5 and -5
+    When I add "-5" and "-5"
     Then I should get -10
 
   @add
