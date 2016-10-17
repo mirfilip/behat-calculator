@@ -1,0 +1,11 @@
+default:
+  gherkin:
+    filters:
+      tags: ~@wip
+
+  suites:
+    default:
+      paths:
+        - %paths.base%/tests/features
+      contexts:
+        - Behat\Context\FeatureContext

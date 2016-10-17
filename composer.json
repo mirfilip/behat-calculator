@@ -13,5 +13,10 @@
         "psr-4": {
             "Calculator\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Behat\\": "tests/features/src/"
+        }
     }
 }
