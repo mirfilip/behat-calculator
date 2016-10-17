@@ -15,10 +15,13 @@
     - Heavily based on `Cucumber` project from Ruby
     - Easy
     - `Context`
+4. Behat initialization
     - Interactive mode
         - `--append-snipets`
-4. Behat initialization
-
+        - it should fail all the time
+    - First implementation should be a dummy
+    - We are prototyping while implementing test
+        - This is a main benefit of that approach
 
 Later:
 Behat support in IDE (PHPStorm)

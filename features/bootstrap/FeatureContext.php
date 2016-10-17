@@ -11,6 +11,11 @@ use Behat\Gherkin\Node\TableNode;
 class FeatureContext implements Context
 {
     /**
+     * @var Calculator
+     */
+    private $calc;
+
+    /**
      * Initializes context.
      *
      * Every scenario gets its own context instance.
@@ -19,6 +24,7 @@ class FeatureContext implements Context
      */
     public function __construct()
     {
+        $this->calc = new Calculator();
     }
 
     /**
@@ -26,39 +32,40 @@ class FeatureContext implements Context
      */
     public function thereIsNoInput()
     {
-        throw new PendingException();
+        $this->calc->reset();
     }
 
     /**
-     * @When I add :arg1 and :arg2
+     * @When I add :in1 and :in2
      */
-    public function iAddAnd($arg1, $arg2)
+    public function iAddAnd($in1, $in2)
     {
-        throw new PendingException();
+        $this->calc->add($in1, $in2);
     }
 
     /**
-     * @Then I should get :arg1
+     * @Then I should get :expected
      */
-    public function iShouldGet($arg1)
+    public function iShouldGet($expected)
     {
-        throw new PendingException();
+        // TODO: Errors?
+        $this->calc->getResult();
     }
 
     /**
-     * @When I subtract :arg1 and :arg2
+     * @When I subtract :in1 and :in2
      */
-    public function iSubtractAnd($arg1, $arg2)
+    public function iSubtractAnd($in1, $in2)
     {
-        throw new PendingException();
+        $this->calc->subtract($in1, $in2);
     }
 
     /**
-     * @When I divide :arg1 and :arg2
+     * @When I divide :in1 and :in2
      */
-    public function iDivideAnd($arg1, $arg2)
+    public function iDivideAnd($in1, $in2)
     {
-        throw new PendingException();
+        $this->calc->divide($in1, $in2);
     }
 
     /**
@@ -66,6 +73,6 @@ class FeatureContext implements Context
      */
     public function iShouldGetAnError()
     {
-        throw new PendingException();
+        $this->calc->getError();
     }
 }
