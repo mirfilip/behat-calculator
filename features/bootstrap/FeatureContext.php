@@ -28,6 +28,15 @@ class FeatureContext implements Context
     }
 
     /**
+     * @Transform /^(-?\d+(?:\.\d+)?)$/
+     */
+    public function castStringToFloat($string)
+    {
+        return floatval($string);
+    }
+
+
+    /**
      * @Given there is no input
      */
     public function thereIsNoInput()
@@ -36,7 +45,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When /^I add (-?\d+(?:\.\d+)?) and (-?\d+(?:\.\d+)?)$/
+     * @When I add :in1 and :in2
      */
     public function iAddAnd($in1, $in2)
     {
@@ -44,7 +53,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Then /^I should get (-?\d+(?:\.\d+)?)$/
+     * @Then I should get :expected
      */
     public function iShouldGet($expected)
     {
@@ -55,7 +64,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When /^I subtract (-?\d+(?:\.\d+)?) and (-?\d+(?:\.\d+)?)$/
+     * @When I subtract :in1 and :in2
      */
     public function iSubtractAnd($in1, $in2)
     {
@@ -63,7 +72,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When /^I divide (-?\d+(?:\.\d+)?) and (-?\d+(?:\.\d+)?)$/
+     * @When I divide :in1 and :in2
      */
     public function iDivideAnd($in1, $in2)
     {

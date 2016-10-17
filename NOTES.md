@@ -42,10 +42,12 @@
     - We'll start with builtin assertions
 7. Types in PHP vs behat
     - All you receive is either a string (PyString) or array
-    - `Transform` concept - to be continued
+    - `Transform` concept - to be continued in the next step
 8. Refactoring our feature
     - `Background` concept
-    - 
+    - Tags help us logically group scenarios within one ore more features
+    - Running tagged scenarios: `behat --tags=sub`
+    - `Transform` helps us simplify steps descriptions
         
 Later:
 Behat support in IDE (PHPStorm)
