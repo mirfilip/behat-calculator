@@ -32,6 +32,16 @@
     - For MVP, Calculator class goes to `feature/bootstrap`
     - Very naive implementation first
     - `@wip` scenarios - return to tags concept
-    
+6. Assertions
+    - Behat DOES NOT HAVE an assertion library
+    - Plenty of assertion libs already written:
+        - maybe you're good with `assert`?
+        - [PHPUnit](https://github.com/sebastianbergmann/phpunit/blob/5.6/src/Framework/Assert/Functions.php)
+        - [Beberlei/Assert](https://github.com/beberlei/assert)
+        - [Respect/Validation](https://github.com/Respect/Validation)
+    - We'll start with builtin assertions
+7. Types in PHP vs behat
+    - All you receive is either a string (PyString) or array
+        
 Later:
 Behat support in IDE (PHPStorm)

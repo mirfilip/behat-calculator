@@ -57,7 +57,7 @@ Feature: Arithmetic operations
   Scenario: Division by zero is not allowed
     Given there is no input
     When I divide 10 and 0
-    Then I should get an error
+    Then I should get an error "Division by zero"
 
   @wip
   Scenario: Multiplication of two positive numbers

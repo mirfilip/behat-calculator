@@ -36,7 +36,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When /^I add (-?\d+) and (-?\d+)$/
+     * @When /^I add (-?\d+(?:\.\d+)?) and (-?\d+(?:\.\d+)?)$/
      */
     public function iAddAnd($in1, $in2)
     {
@@ -44,16 +44,18 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Then /^I should get (-?\d+)$/
+     * @Then /^I should get (-?\d+(?:\.\d+)?)$/
      */
     public function iShouldGet($expected)
     {
         // TODO: What if errors occurred?
-        $this->calc->getResult();
+        $result = $this->calc->getResult();
+
+        assert($result == $expected, "$expected is not equal to $result");
     }
 
     /**
-     * @When /^I subtract (-?\d+) and (-?\d+)$/
+     * @When /^I subtract (-?\d+(?:\.\d+)?) and (-?\d+(?:\.\d+)?)$/
      */
     public function iSubtractAnd($in1, $in2)
     {
@@ -61,7 +63,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When /^I divide (-?\d+) and (-?\d+)$/
+     * @When /^I divide (-?\d+(?:\.\d+)?) and (-?\d+(?:\.\d+)?)$/
      */
     public function iDivideAnd($in1, $in2)
     {
@@ -69,10 +71,12 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Then I should get an error
+     * @Then I should get an error :errorMsg
      */
-    public function iShouldGetAnError()
+    public function iShouldGetAnError($expectedError)
     {
-        $this->calc->getError();
+        $actualError = $this->calc->getError();
+
+        assert($actualError === $expectedError, "Expected error '$expectedError' is not actual '$actualError'");
     }
 }

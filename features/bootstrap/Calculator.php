@@ -23,6 +23,7 @@ class Calculator
     public function reset()
     {
         $this->input = '';
+        $this->result = 0;
     }
 
     public function add($in1, $in2)
@@ -47,6 +48,11 @@ class Calculator
 
     public function divide($in1, $in2)
     {
+        if (0 == $in2) {
+            $this->error = 'Division by zero';
+            return;
+        }
+
         $result = $in1 / $in2;
 
         $this->input = "$in1 / $in2";
