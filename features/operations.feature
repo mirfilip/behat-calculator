@@ -12,38 +12,41 @@ Feature: Arithmetic operations
 
   Remember about the edge cases (division by zero)
 
-  Scenario: Addition of two positive numbers
+  Background:
     Given there is no input
+
+  @add
+  Scenario: Addition of two positive numbers
     When I add 1 and 2
     Then I should get 3
 
+  @add
   Scenario: Addition of two negative numbers
-    Given there is no input
     When I add -5 and -5
     Then I should get -10
 
+  @add
   Scenario: Addition of one positive and one negative number
-    Given there is no input
     When I add 1 and -2
     Then I should get -1
 
+  @sub
   Scenario: Subtraction of two positive numbers
-    Given there is no input
     When I subtract 1 and 1
     Then I should get 0
 
+  @sub
   Scenario: Subtraction of two negative numbers
-    Given there is no input
     When I subtract -4 and -3
     Then I should get -1
 
+  @sub
   Scenario: Subtraction of one negative number and one positive number
-    Given there is no input
     When I subtract -4 and 5
     Then I should get -9
 
+  @div
   Scenario Outline: Division of two numbers
-    Given there is no input
     When I divide <first> and <second>
     Then I should get <expected>
 
@@ -54,8 +57,8 @@ Feature: Arithmetic operations
       | -10   | 2      | -5       |
       | 10    | -2     | -5       |
 
+  @div
   Scenario: Division by zero is not allowed
-    Given there is no input
     When I divide 10 and 0
     Then I should get an error "Division by zero"
 

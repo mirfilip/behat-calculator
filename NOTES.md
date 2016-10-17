@@ -42,6 +42,10 @@
     - We'll start with builtin assertions
 7. Types in PHP vs behat
     - All you receive is either a string (PyString) or array
+    - `Transform` concept - to be continued
+8. Refactoring our feature
+    - `Background` concept
+    - 
         
 Later:
 Behat support in IDE (PHPStorm)
