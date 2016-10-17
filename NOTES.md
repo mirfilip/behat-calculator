@@ -4,7 +4,8 @@
     - All stakeholder write a "spec" during first discussion about the project
     - Plain english (or any other lang)
     - New language - not bound to any programming lang
-    - Using domain language when writing 
+    - Using domain language when writing
+    - This can be a documentation only, automated testing or both
 3. Writing first `.feature` file
     - `Feature` header
     -  Notes section (optional)
@@ -22,6 +23,9 @@
     - First implementation should be a dummy
     - We are prototyping while implementing test
         - This is a main benefit of that approach
-
+5. Implementation
+    - Problem with scenario description: minus signs
+    - Scenario description can be a normal sentence (limited) or regex
+    - We switch to regex
 Later:
 Behat support in IDE (PHPStorm)

@@ -36,7 +36,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When I add :in1 and :in2
+     * @When /^I add (-?\d+) and (-?\d+)$/
      */
     public function iAddAnd($in1, $in2)
     {
@@ -44,7 +44,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Then I should get :expected
+     * @Then /^I should get (-?\d+)$/
      */
     public function iShouldGet($expected)
     {
@@ -53,7 +53,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When I subtract :in1 and :in2
+     * @When /^I subtract (-?\d+) and (-?\d+)$/
      */
     public function iSubtractAnd($in1, $in2)
     {
@@ -61,7 +61,7 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When I divide :in1 and :in2
+     * @When /^I divide (-?\d+) and (-?\d+)$/
      */
     public function iDivideAnd($in1, $in2)
     {
