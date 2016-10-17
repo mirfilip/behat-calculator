@@ -5,4 +5,3 @@ git reset --hard origin/master
 
 GO_TO_COMMIT=$(git rev-list --max-parents=1 HEAD | tail -r | sed -n "$COMMIT"p)
 git checkout $GO_TO_COMMIT
-

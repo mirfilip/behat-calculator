@@ -1,4 +1,5 @@
-Very basic calculator project created for Behat courses.
+**[1/4]** Very basic calculator project created for Behat courses.
+
 - test first
 - BDD
 - TDD
