@@ -1,6 +1,6 @@
 1. Clone project
 2. Gherkin intro
-    - `Context-Action-Outcome` a.k.a `When-Given-Then`
+    - `Context-Action-Outcome` a.k.a `Given-When-Then` (http://martinfowler.com/bliki/GivenWhenThen.html, https://github.com/cucumber/cucumber/wiki/Given-When-Then)
     - All stakeholder write a "spec" during first discussion about the project
     - Plain english (or any other lang)
     - New language - not bound to any programming lang
@@ -51,8 +51,8 @@
 9. Restructuring the project
     - Move Calculator to src/
     - Use PSR-4 autoloading
-    - Behat uses composer autoloader by defult (if present)
-    - 
+    - Behat uses composer autoloader by default (if present)
+
 
 Later:
 Behat support in IDE (PHPStorm)
